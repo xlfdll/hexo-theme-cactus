@@ -46,8 +46,23 @@ A responsive, clean and simple [Hexo](http://hexo.io) theme for a personal websi
     # theme: landscape
     theme: cactus
     ```
+    See below for more information on how to customize this theme.
+    
+3. Create pages and articles with the `hexo new [layout] <title>` command.
+    For example, to create an "about me" page, run:
+    ```sh
+    $ hexo new page about
+    ```
+    This will create a new file in `source/about/index.md`
+    Similary, you can create a new article with
+    ```sh
+    $ hexo new post "hello world"
+    ```
+    and add some interesting content in `source/_posts/hello-world.md`.
+    
+4. Run: `hexo generate` and `hexo server`
 
-3. Run: `hexo generate` and `hexo server`
+5. [Publish your blog](https://hexo.io/docs/deployment)!
 
 
 ## Configuration
@@ -166,9 +181,12 @@ If you are new to Hexo and internationalization (i18n), please read
 Currently, the theme is delivered with support for:
 
 - English (en), default
+- Brazilian Portuguese (pt-br)
+- Catalan (ca)
 - Chinese (Simplified, PRC) (zh-CN)
 - Dutch (nl)
 - French (fr)
+- Italian (it)
 - Persian (fa)
 - Russian (ru)
 - Spanish (es)
@@ -273,6 +291,14 @@ $ hexo new page categories
 
 and adding `type: categories` to the front-matter of `source/categories/index.md`. 
 
+Finally, don't forget to create a link to these pages, for example in the navigation menu:
+
+```yml
+nav:
+  tags: /tags/
+  categories: /categories/
+```
+
 
 ### Local search
 
@@ -300,7 +326,7 @@ Finally, edit the `_config.yml` and add a link to the navigation menu.
 
 ```yml
 nav:
-  search: /Search/
+  search: /search/
 ```
 
 

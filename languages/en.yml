@@ -2,6 +2,8 @@ nav:
   home: Home
   about: About
   articles: Writing
+  tag: Tag
+  category: Category
   projects: Projects
   search: Search
 
@@ -57,3 +59,7 @@ counter:
 
 comments:
   no_js: Please enable JavaScript to view the comments.
+
+tooltip:
+  copy_tip: Copy to clipboard!
+  copied: Copied!

@@ -11,14 +11,16 @@ global-reset()
   box-sizing: border-box
 
 html
+  margin: 0
+  padding: 0
   height: 100%
   border-top: 2px solid $color-text
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
 
 body
-  display: flex
-  flex-direction: column
+  margin: 0
+  height: 100%
   background-color: $color-background
   color: $color-text
   font-display: swap // @stylint ignore
@@ -27,13 +29,18 @@ body
   font-family: $font-family-body
   line-height: $line-height
   text-rendering: geometricPrecision
+  flex: 1
 
   antialias()
 
-.content
-  flex: 1
-
   @extend $base-style
+
+.content
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow-wrap: break-word
 
   p
     hyphens(auto)
@@ -114,6 +121,7 @@ body
 @import "_partial/pagination"
 @import "_partial/search"
 @import "_partial/tags"
+@import "_partial/tooltip"
 @import "_partial/categories"
 // Code
 @import "_highlight/" + $highlight
@@ -172,6 +180,19 @@ code
 
     &:after
       clear: both
+
+  &:hover 
+    .btn-copy
+      opacity: 1
+
+  .btn-copy
+    font-size: 1.2rem
+    position: absolute
+    right: 20px
+    opacity: 0
+    transition: opacity 0.2s ease-in
+    &:hover
+      color: $color-accent-1
 
   pre
     padding: 0
