@@ -17,7 +17,7 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: projects_url
+  projects: http://github.com/probberechts
 
 
 # Links to your social media accounts.
@@ -64,6 +64,15 @@ post:
 copyright:
   start_year: 2016
   end_year:
+
+# Customize the 404 page
+# Options:
+#   - enabled: whether to enable the 404 page (404.html).
+error_404:
+  enabled: true
+  title: "404 Page Not Found"
+  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+
 
 ##############################################################################
 # Look and Feel
@@ -145,6 +154,14 @@ mathjax:
 disqus:
   enabled: false
   shortname: cactus-1
+
+# Fill in your Utterances data to enable Utterances comments
+utterances:
+  enabled: false
+  repo: owner/githubrepo
+  issue_term: pathname
+  label: Comment
+  theme: github-dark
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
